@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swamy Super Mart</title>
+
+<link rel="stylesheet" href="index.css">
+<script src="index.js" defer></script>
+</head>
+
+<body>
+<div id="loader">Loading...</div>
+<!-- NAVBAR -->
+<nav class="nav">
+  <h2 class="logo">🛒 Swamy Mart</h2>
+
+  <input type="text" id="search" placeholder="Search products...">
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="#" onclick="toggleCart()">Cart 🛍️</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Fresh Groceries Delivered Fast</h1>
+    <p>Best prices | Fresh items | Fast delivery</p>
+    <button onclick="scrollToProducts()">Shop Now</button>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Our Products</h2>
+  <div id="productContainer" class="product-grid"></div>
+</section>
+
+<section class="about">
+  <h2>About Swamy Super Mart</h2>
+
+  <p>
+    Swamy Super Mart is a trusted online grocery platform dedicated to delivering 
+    fresh, high-quality products at affordable prices. We aim to simplify your 
+    daily shopping experience by bringing everything you need right to your doorstep.
+  </p>
+
+  <p>
+    Our store offers a wide range of products including fresh fruits, vegetables, 
+    dairy items, snacks, and household essentials. We carefully select every product 
+    to ensure quality, freshness, and customer satisfaction.
+  </p>
+
+  <p>
+    With fast delivery, secure payment options, and excellent customer service, 
+    Swamy Super Mart is committed to providing a seamless shopping experience 
+    for every customer.
+  </p>
+
+  <!-- EXTRA CONTENT BLOCK -->
+  <div class="about-box">
+    <div>
+      <h3>🎯 Our Mission</h3>
+      <p>
+        To provide fresh groceries at affordable prices while ensuring convenience, 
+        speed, and customer satisfaction.
+      </p>
+    </div>
+
+    <div>
+      <h3>👁️ Our Vision</h3>
+      <p>
+        To become the most trusted and preferred online grocery store for every household.
+      </p>
+    </div>
+
+    <div>
+      <h3>💡 Our Values</h3>
+      <p>
+        Quality, honesty, customer-first approach, and continuous improvement.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- CART -->
+<div id="cart" class="cart">
+  <h3>Your Cart</h3>
+  <ul id="cartItems"></ul>
+  <h4 id="total"></h4>
+  <button class="checkout" onclick="showPayment()">Checkout</button>
+</div>
+<div class="floating-cart" onclick="toggleCart()">🛒</div>
+
+<!-- PAYMENT SECTION -->
+<section id="paymentSection" class="payment hidden">
+  <h2>Choose Payment Method</h2>
+
+  <select id="paymentMethod">
+    <option value="">Select Payment</option>
+    <option>Debit Card</option>
+    <option>Net Banking</option>
+    <option>PhonePe</option>
+    <option>GPay</option>
+    <option>Paytm</option>
+  </select>
+
+  <button onclick="processPayment()">Pay Now</button>
+
+  <p id="paymentMsg"></p>
+</section>
+
+
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: support@swamymart.com</p>
+  <p>Phone: +91 913384289</p>
+
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button>Send</button>
+  </form>
+</section>
+
+</body>
+</html>
